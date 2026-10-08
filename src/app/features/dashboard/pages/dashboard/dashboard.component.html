@@ -1,0 +1,37 @@
+<header class="mb-8">
+
+  <h1 class="text-3xl font-semibold tracking-tight text-slate-900">
+    Dashboard
+  </h1>
+
+  <p>
+    Resumen general de la administración de la iglesia.
+  </p>
+</header>
+
+<div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+
+<app-summary-card
+title="Total de miembros"
+[value]="(countMembers)">
+</app-summary-card>
+
+<app-summary-card
+title="Ministerios"
+[value]="(countMinistries)">
+</app-summary-card>
+
+<app-summary-card
+title="Diezmos"
+[value]="(totalTithes | currency:'CLP':'symbol-narrow':'1.0-0')?? '$0'">
+
+</app-summary-card>
+
+<app-summary-card
+title="Ofrendas"
+[value]="(totalOfferings | currency:'CLP':'symbol-narrow':'1.0-0')?? '$0'">
+
+</app-summary-card>
+
+
+</div>
